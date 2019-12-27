@@ -1,0 +1,411 @@
+卷 仓库 的文件夹 PATH 列表
+卷序列号为 6E4F-71D9
+F:.
+├─.vscode
+├─node_modules
+│  ├─.bin
+│  ├─@babel
+│  │  ├─code-frame
+│  │  │  └─lib
+│  │  └─highlight
+│  │      └─lib
+│  ├─@types
+│  │  ├─mocha
+│  │  └─node
+│  │      └─ts3.2
+│  ├─agent-base
+│  │  └─test
+│  ├─ajv
+│  │  ├─dist
+│  │  ├─lib
+│  │  │  ├─compile
+│  │  │  ├─dot
+│  │  │  ├─dotjs
+│  │  │  └─refs
+│  │  └─scripts
+│  ├─ansi-styles
+│  ├─argparse
+│  │  └─lib
+│  │      ├─action
+│  │      │  ├─append
+│  │      │  └─store
+│  │      ├─argument
+│  │      └─help
+│  ├─asn1
+│  │  └─lib
+│  │      └─ber
+│  ├─assert-plus
+│  ├─asynckit
+│  │  └─lib
+│  ├─aws-sign2
+│  ├─aws4
+│  ├─balanced-match
+│  ├─bcrypt-pbkdf
+│  ├─brace-expansion
+│  ├─browser-stdout
+│  ├─buffer-from
+│  ├─builtin-modules
+│  ├─caseless
+│  ├─chalk
+│  │  └─types
+│  ├─color-convert
+│  ├─color-name
+│  ├─combined-stream
+│  │  └─lib
+│  ├─commander
+│  │  └─typings
+│  ├─concat-map
+│  │  ├─example
+│  │  └─test
+│  ├─core-util-is
+│  │  └─lib
+│  ├─dashdash
+│  │  ├─etc
+│  │  └─lib
+│  ├─debug
+│  │  └─src
+│  ├─delayed-stream
+│  │  └─lib
+│  ├─diff
+│  │  ├─.vscode
+│  │  ├─dist
+│  │  └─lib
+│  │      ├─convert
+│  │      ├─diff
+│  │      ├─patch
+│  │      └─util
+│  ├─ecc-jsbn
+│  │  └─lib
+│  ├─es6-promise
+│  │  ├─dist
+│  │  └─lib
+│  │      └─es6-promise
+│  │          └─promise
+│  ├─es6-promisify
+│  │  └─dist
+│  ├─escape-string-regexp
+│  ├─esprima
+│  │  ├─bin
+│  │  └─dist
+│  ├─esutils
+│  │  └─lib
+│  ├─extend
+│  ├─extsprintf
+│  │  └─lib
+│  ├─fast-deep-equal
+│  ├─fast-json-stable-stringify
+│  │  ├─.github
+│  │  ├─benchmark
+│  │  ├─example
+│  │  └─test
+│  ├─forever-agent
+│  ├─form-data
+│  │  └─lib
+│  ├─fs.realpath
+│  ├─getpass
+│  │  └─lib
+│  ├─glob
+│  ├─growl
+│  │  └─lib
+│  ├─har-schema
+│  │  └─lib
+│  ├─har-validator
+│  │  └─lib
+│  ├─has-flag
+│  ├─he
+│  │  ├─bin
+│  │  └─man
+│  ├─http-proxy-agent
+│  │  └─test
+│  ├─http-signature
+│  │  └─lib
+│  ├─https-proxy-agent
+│  ├─inflight
+│  ├─inherits
+│  ├─is-typedarray
+│  ├─isstream
+│  ├─js-tokens
+│  ├─js-yaml
+│  │  ├─bin
+│  │  ├─dist
+│  │  └─lib
+│  │      └─js-yaml
+│  │          ├─schema
+│  │          └─type
+│  │              └─js
+│  ├─jsbn
+│  ├─json-schema
+│  │  ├─draft-00
+│  │  ├─draft-01
+│  │  ├─draft-02
+│  │  ├─draft-03
+│  │  │  └─examples
+│  │  ├─draft-04
+│  │  ├─lib
+│  │  └─test
+│  ├─json-schema-traverse
+│  │  └─spec
+│  │      └─fixtures
+│  ├─json-stringify-safe
+│  │  └─test
+│  ├─jsprim
+│  │  └─lib
+│  ├─mime-db
+│  ├─mime-types
+│  ├─minimatch
+│  ├─minimist
+│  │  ├─example
+│  │  └─test
+│  ├─mkdirp
+│  │  ├─bin
+│  │  ├─examples
+│  │  └─test
+│  ├─mocha
+│  │  ├─bin
+│  │  ├─lib
+│  │  │  ├─browser
+│  │  │  ├─interfaces
+│  │  │  └─reporters
+│  │  └─node_modules
+│  │      ├─commander
+│  │      │  └─typings
+│  │      ├─diff
+│  │      │  ├─dist
+│  │      │  └─lib
+│  │      │      ├─convert
+│  │      │      ├─diff
+│  │      │      ├─patch
+│  │      │      └─util
+│  │      ├─glob
+│  │      └─supports-color
+│  ├─ms
+│  ├─oauth-sign
+│  ├─once
+│  ├─path-is-absolute
+│  ├─path-parse
+│  ├─performance-now
+│  │  ├─lib
+│  │  ├─src
+│  │  └─test
+│  │      └─scripts
+│  ├─psl
+│  │  ├─data
+│  │  └─dist
+│  ├─punycode
+│  ├─qs
+│  │  ├─dist
+│  │  ├─lib
+│  │  └─test
+│  ├─querystringify
+│  ├─request
+│  │  └─lib
+│  ├─requires-port
+│  ├─resolve
+│  │  ├─example
+│  │  ├─lib
+│  │  └─test
+│  │      ├─dotdot
+│  │      │  └─abc
+│  │      ├─module_dir
+│  │      │  ├─xmodules
+│  │      │  │  └─aaa
+│  │      │  ├─ymodules
+│  │      │  │  └─aaa
+│  │      │  └─zmodules
+│  │      │      └─bbb
+│  │      ├─node_path
+│  │      │  ├─x
+│  │      │  │  ├─aaa
+│  │      │  │  └─ccc
+│  │      │  └─y
+│  │      │      ├─bbb
+│  │      │      └─ccc
+│  │      ├─pathfilter
+│  │      │  └─deep_ref
+│  │      ├─precedence
+│  │      │  ├─aaa
+│  │      │  └─bbb
+│  │      ├─resolver
+│  │      │  ├─baz
+│  │      │  ├─browser_field
+│  │      │  ├─dot_main
+│  │      │  ├─dot_slash_main
+│  │      │  ├─incorrect_main
+│  │      │  ├─invalid_main
+│  │      │  ├─multirepo
+│  │      │  │  └─packages
+│  │      │  │      ├─package-a
+│  │      │  │      └─package-b
+│  │      │  ├─nested_symlinks
+│  │      │  │  └─mylib
+│  │      │  ├─other_path
+│  │      │  │  └─lib
+│  │      │  ├─quux
+│  │      │  │  └─foo
+│  │      │  ├─same_names
+│  │      │  │  └─foo
+│  │      │  ├─symlinked
+│  │      │  │  ├─package
+│  │      │  │  └─_
+│  │      │  │      ├─node_modules
+│  │      │  │      └─symlink_target
+│  │      │  └─without_basedir
+│  │      └─shadowed_core
+│  │          └─node_modules
+│  │              └─util
+│  ├─safe-buffer
+│  ├─safer-buffer
+│  ├─semver
+│  │  └─bin
+│  ├─source-map
+│  │  ├─dist
+│  │  └─lib
+│  ├─source-map-support
+│  ├─sprintf-js
+│  │  ├─demo
+│  │  ├─dist
+│  │  ├─src
+│  │  └─test
+│  ├─sshpk
+│  │  ├─bin
+│  │  ├─lib
+│  │  │  └─formats
+│  │  └─man
+│  │      └─man1
+│  ├─supports-color
+│  ├─tough-cookie
+│  │  ├─lib
+│  │  └─node_modules
+│  │      └─punycode
+│  ├─tslib
+│  ├─tslint
+│  │  ├─bin
+│  │  └─lib
+│  │      ├─configs
+│  │      ├─files
+│  │      ├─formatters
+│  │      ├─language
+│  │      │  ├─formatter
+│  │      │  ├─rule
+│  │      │  └─walker
+│  │      ├─rules
+│  │      │  ├─code-examples
+│  │      │  └─completed-docs
+│  │      └─verify
+│  ├─tsutils
+│  │  ├─typeguard
+│  │  │  ├─2.8
+│  │  │  ├─2.9
+│  │  │  ├─3.0
+│  │  │  └─next
+│  │  └─util
+│  ├─tunnel-agent
+│  ├─tweetnacl
+│  ├─typescript
+│  │  ├─bin
+│  │  ├─lib
+│  │  │  ├─cs
+│  │  │  ├─de
+│  │  │  ├─es
+│  │  │  ├─fr
+│  │  │  ├─it
+│  │  │  ├─ja
+│  │  │  ├─ko
+│  │  │  ├─pl
+│  │  │  ├─pt-br
+│  │  │  ├─ru
+│  │  │  ├─tr
+│  │  │  ├─zh-cn
+│  │  │  └─zh-tw
+│  │  └─loc
+│  │      └─lcl
+│  │          ├─CHS
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─CHT
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─CSY
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─DEU
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─ESN
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─FRA
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─ITA
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─JPN
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─KOR
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─PLK
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─PTB
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          ├─RUS
+│  │          │  ├─Targets
+│  │          │  ├─TypeScriptDebugEngine
+│  │          │  ├─TypeScriptLanguageService
+│  │          │  └─TypeScriptTasks
+│  │          └─TRK
+│  │              ├─Targets
+│  │              ├─TypeScriptDebugEngine
+│  │              ├─TypeScriptLanguageService
+│  │              └─TypeScriptTasks
+│  ├─uri-js
+│  │  ├─dist
+│  │  │  ├─es5
+│  │  │  └─esnext
+│  │  │      └─schemes
+│  │  ├─src
+│  │  │  └─schemes
+│  │  └─tests
+│  ├─url-parse
+│  │  └─dist
+│  ├─uuid
+│  │  ├─bin
+│  │  └─lib
+│  ├─verror
+│  │  └─lib
+│  ├─vscode
+│  │  ├─bin
+│  │  └─lib
+│  ├─vscode-test
+│  │  └─out
+│  └─wrappy
+├─out
+│  └─test
+└─src
+    └─test

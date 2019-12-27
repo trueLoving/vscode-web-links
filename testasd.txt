@@ -1,0 +1,24 @@
+卷 仓库 的文件夹 PATH 列表
+卷序列号为 6E4F-71D9
+F:.
+│  .gitignore // git忽略文件
+│  .vscodeignore // vscode 打包忽略文件
+│  CHANGELOG.md // 更新日志
+│  package.json
+│  README.md
+│  tsconfig.json // typescript编译配置
+│  tslint.json // tslint配置
+│  
+├─.vscode // .vscode开发配置
+ |
+├─node_modules // 相关依赖
+│          
+├─out // typescript编译好的文件
+│          
+└─src // 源文件
+    │  extension.ts
+    │  
+    └─test
+            extension.test.ts
+            index.ts
+            
