@@ -22,6 +22,27 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "document-links",
+					"title": "Document Links",
+					"icon": "resources/document.svg"
+				}
+			]
+		},
+		"views": {
+			"document-links": [
+				{
+					"id": "url-list",
+					"name": "Url Links"
+				},
+				{
+					"id": "others",
+					"name": "Others"
+				}
+			]
+		},
 		"configuration": {
 			"title": "document-links",
 			"properties": {
