@@ -10,6 +10,7 @@
 1. vs code 
 2. typescript
 3. ts lint
+4. vsce // vscode打包工具，需要Node全局安装(npm i vsce -g)
 4. .......
 
 
@@ -20,6 +21,7 @@
 npm run compile  将typescript编译成js
 npm run watch 编译typescript并且监控运行情况
 npm run test 编译typescript并测试
+npm run package 本地打包
 ```
 
 
