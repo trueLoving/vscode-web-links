@@ -6,9 +6,9 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
     private _onDidChangeTreeData: vscode.EventEmitter<Document | undefined> = new vscode.EventEmitter<Document | undefined>();
     readonly onDidChangeTreeData: vscode.Event<Document | undefined> = this._onDidChangeTreeData.event;
 
-    constructor(private workplaceRoot: string) {
 
-    }
+    constructor() { }
+
 
     refresh() {
         this._onDidChangeTreeData.fire();
@@ -24,12 +24,22 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
         if (element) {
             vscode.window.showInformationMessage(element.toString());
         } else {
-            let menu = new Array<Document>();
-            let document = new Document("test1", "test2");
-            menu.push(document);
-            menu.push(document);
-            return menu;
+            return this.getData(vscode.workspace.getConfiguration().documentLinks);
         }
+    }
+
+
+    private getData(data: Array<Object>): Array<Document> {
+
+        let documentLinks = new Array<Document>();
+
+        for (let i = 0; i < data.length; i++) {
+            let document = new Document(data[i].label, data[i].url);
+            documentLinks.push(document);
+        }
+
+        return documentLinks;
+
     }
 
 }
@@ -38,18 +48,12 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
 
 export class Document extends vscode.TreeItem {
 
-    public label: string;
 
     public url: string;
 
     constructor(label: string, url: string) {
         super(label);
-        this.label = label;
         this.url = url;
-    }
-
-    toString(): string {
-        return "label is " + this.label + "; url is " + this.url;
     }
 
     get tooltip(): string {
@@ -60,5 +64,8 @@ export class Document extends vscode.TreeItem {
         return this.label;
     }
 
-    
+    toString(): string {
+        return "label is " + this.label + "; url is " + this.url;
+    }
+
 }

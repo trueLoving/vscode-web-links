@@ -19,8 +19,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(disposable);
 
-	const documentDataProvider = new DocumentDataProvider(vscode.workspace.rootPath);
-	vscode.window.registerTreeDataProvider("urlLists", documentDataProvider);
+	const documentDataProvider = new DocumentDataProvider();
+	vscode.window.registerTreeDataProvider("documentLinks", documentDataProvider);
 
 }
 

@@ -19,7 +19,7 @@
 	},
 	"activationEvents": [
 		"onCommand:extension.ss.openDocs",
-		"onView:urlLists"
+		"onView:documentLinks"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -35,8 +35,8 @@
 		"views": {
 			"document-links": [
 				{
-					"id": "urlLists",
-					"name": "Url Links"
+					"id": "documentLinks",
+					"name": "document Links"
 				},
 				{
 					"id": "others",
@@ -45,7 +45,7 @@
 			]
 		},
 		"configuration": {
-			"title": "document-links",
+			"title": "documentLinks",
 			"properties": {
 				"documentLinks": {
 					"type": "array",
