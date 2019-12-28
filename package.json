@@ -18,7 +18,8 @@
 		"url": "https://github.com/trueLoving/vscode-document-links.git"
 	},
 	"activationEvents": [
-		"onCommand:extension.ss.openDocs"
+		"onCommand:extension.ss.openDocs",
+		"onView:urlLists"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -34,7 +35,7 @@
 		"views": {
 			"document-links": [
 				{
-					"id": "url-list",
+					"id": "urlLists",
 					"name": "Url Links"
 				},
 				{

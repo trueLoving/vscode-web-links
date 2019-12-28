@@ -6,7 +6,7 @@ import * as vscode from "vscode";
  * 打开文档
  * @param label 文档标签
  */
-function openDoc(label: string) {
+export function openDoc(label: string) {
 
     // 要打开的文档链接
     let webUrl = "";
