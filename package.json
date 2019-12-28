@@ -6,6 +6,7 @@
 	"engines": {
 		"vscode": "^1.41.0"
 	},
+	"publisher": "starsky",
 	"author": {
 		"name": "starsky",
 		"email": "1176789241@qq.com"
