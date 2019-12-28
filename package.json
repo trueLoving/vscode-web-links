@@ -6,6 +6,10 @@
 	"engines": {
 		"vscode": "^1.41.0"
 	},
+	"author": {
+		"name": "starsky",
+		"email": "1176789241@qq.com"
+	},
 	"categories": [
 		"Other"
 	],
@@ -13,14 +17,14 @@
 		"url": "https://github.com/trueLoving/vscode-document-links.git"
 	},
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.ss.openDocs"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.ss.openDocs",
+				"title": "open docs"
 			}
 		]
 	},
