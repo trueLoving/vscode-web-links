@@ -21,6 +21,24 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": {
+			"title": "document-links",
+			"properties": {
+				"documentLinks": {
+					"type": "array",
+					"default": [
+						{
+							"label": "vue",
+							"url": "https://cn.vuejs.org/"
+						},
+						{
+							"label": "vs code",
+							"url": "https://code.visualstudio.com/"
+						}
+					]
+				}
+			}
+		},
 		"commands": [
 			{
 				"command": "extension.ss.openDocs",
