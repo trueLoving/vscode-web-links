@@ -44,6 +44,14 @@
 				}
 			]
 		},
+		"menus": {
+			"view/item/context": [
+				{
+					"command": "documentLinks.open",
+					"when": "view == documentLinks"
+				}
+			]
+		},
 		"configuration": {
 			"title": "documentLinks",
 			"properties": {
@@ -66,6 +74,10 @@
 			{
 				"command": "extension.ss.openDocs",
 				"title": "open docs"
+			},
+			{
+				"command": "documentLinks.open",
+				"title": "open document links"
 			}
 		]
 	},

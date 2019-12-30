@@ -6,21 +6,28 @@ import * as vscode from 'vscode';
 import { showDocLinks } from "./openDocLinks";
 
 
-import { DocumentDataProvider } from "./documenLinks";
+import { DocumentDataProvider, Document } from "./documenLinks";
+
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-
-	let disposable = vscode.commands.registerCommand("extension.ss.openDocs", () => {
+	
+	vscode.commands.registerCommand("extension.ss.openDocs", () => {
 		showDocLinks();
-	})
+	});
 
-	context.subscriptions.push(disposable);
-
+	
 	const documentDataProvider = new DocumentDataProvider();
 	vscode.window.registerTreeDataProvider("documentLinks", documentDataProvider);
+
+
+	vscode.commands.registerCommand("documentLinks.open", (document: Document) => {
+		if (document) {
+			vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(document.url));
+		}
+	});
 
 }
 
