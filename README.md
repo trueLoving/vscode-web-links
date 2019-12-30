@@ -20,7 +20,6 @@
 ```json
 npm run compile  将typescript编译成js
 npm run watch 编译typescript并且监控运行情况
-npm run test 编译typescript并测试
 npm run package 本地打包
 ```
 
@@ -36,11 +35,11 @@ npm run package 本地打包
 ├─out // typescript编译好的文件
 │          
 └─src // 源文件
-│    │  extension.ts
+│    │ 
 │    │  
-│    └─test
-│         extension.test.ts
-│         ndex.ts
+│    └─test // 测试单元
+│        
+│         
 │  .gitignore // git忽略文件
 │  .vscodeignore // vscode 打包忽略文件
 │  CHANGELOG.md // 更新日志
