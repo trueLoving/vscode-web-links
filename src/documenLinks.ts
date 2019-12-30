@@ -34,7 +34,8 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
         let documentLinks = new Array<Document>();
 
         for (let i = 0; i < data.length; i++) {
-            let document = new Document(data[i].label, data[i].url);
+            // let document = new Document(data[i].label, data[i].url);
+            let document = <Document><unknown>data[i];
             documentLinks.push(document);
         }
 
