@@ -18,7 +18,7 @@
 		"url": "https://github.com/trueLoving/vscode-document-links.git"
 	},
 	"activationEvents": [
-		"onCommand:extension.ss.openDocs",
+		"onCommand:extension.openDocs",
 		"onView:documentLinks"
 	],
 	"main": "./out/extension.js",
@@ -79,7 +79,7 @@
 		},
 		"commands": [
 			{
-				"command": "extension.ss.openDocs",
+				"command": "extension.openDocs",
 				"title": "open docs"
 			},
 			{
@@ -94,6 +94,14 @@
 				"command": "documentLinks.refresh",
 				"title": "refresh document links",
 				"icon": "resources/refresh.svg"
+			},
+			{
+				"command": "documentLinks.delete",
+				"title": "delete document links"
+			},
+			{
+				"command": "documentLinks.edit",
+				"title": "edit document links"
 			}
 		]
 	},
