@@ -40,7 +40,7 @@
 				},
 				{
 					"id": "others",
-					"name": "Others"
+					"name": "others"
 				}
 			]
 		},
@@ -77,14 +77,14 @@
 			},
 			{
 				"command": "documentLinks.open",
-				"title": "open document links"
+				"title": "open document Links"
 			}
 		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",	
+		"watch": "tsc -watch -p ./",
 		"package": "vsce package"
 	},
 	"devDependencies": {
