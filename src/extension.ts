@@ -24,7 +24,7 @@ export function activate() {
 	});
 
 	// 双击打开links
-	vscode.commands.registerCommand("document.doubleClickOpenDocs", url => vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(url)));
+	vscode.commands.registerCommand("document.clickToOpenDocs", url => vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(url)));
 
 }
 

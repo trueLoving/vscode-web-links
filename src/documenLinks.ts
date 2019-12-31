@@ -6,19 +6,15 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
     private _onDidChangeTreeData: vscode.EventEmitter<Document | undefined> = new vscode.EventEmitter<Document | undefined>();
     readonly onDidChangeTreeData: vscode.Event<Document | undefined> = this._onDidChangeTreeData.event;
 
-
     constructor() { }
-
 
     refresh() {
         this._onDidChangeTreeData.fire();
     }
 
-
     getTreeItem(element: Document): vscode.TreeItem | Thenable<vscode.TreeItem> {
         return element;
     }
-
 
     getChildren(element?: Document): vscode.ProviderResult<Document[]> {
         if (element) {
@@ -28,20 +24,23 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
         }
     }
 
-
-    private getData(data: Array<Object>): Array<Document> {
+    /**
+     * 获取本地配置
+     * @param data 本地配置参数
+     */
+    private getData(data: Array<Document>): Array<Document> {
 
         let documentLinks = new Array<Document>();
 
         for (let i = 0; i < data.length; i++) {
 
-            let label = data[i].label;
-            let url = data[i].url;
+            let label:string = data[i].label;
+            let url:string  = data[i].url;
             let document = new Document(label, url, {
-                command: 'document.doubleClickOpenDocs',
+                command: 'document.clickToOpenDocs',
                 title: '',
                 arguments: [url]
-            })
+            });
             documentLinks.push(document);
 
         }
