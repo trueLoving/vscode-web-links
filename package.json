@@ -45,6 +45,13 @@
 			]
 		},
 		"menus": {
+			"view/title": [
+				{
+					"command": "documentLinks.refresh",
+					"when": "view == documentLinks",
+					"group": "navigation"
+				}
+			],
 			"view/item/context": [
 				{
 					"command": "documentLinks.open",
@@ -82,6 +89,11 @@
 			{
 				"command": "documentLinks.add",
 				"title": "add document links"
+			},
+			{
+				"command": "documentLinks.refresh",
+				"title": "refresh document links",
+				"icon": "resources/refresh.svg"
 			}
 		]
 	},

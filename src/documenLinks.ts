@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 
 
-export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
+class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
 
     private _onDidChangeTreeData: vscode.EventEmitter<Document | undefined> = new vscode.EventEmitter<Document | undefined>();
     readonly onDidChangeTreeData: vscode.Event<Document | undefined> = this._onDidChangeTreeData.event;
@@ -34,8 +34,8 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
 
         for (let i = 0; i < data.length; i++) {
 
-            let label:string = data[i].label;
-            let url:string  = data[i].url;
+            let label: string = data[i].label;
+            let url: string = data[i].url;
             let document = new Document(label, url, {
                 command: 'document.clickToOpenDocs',
                 title: '',
@@ -50,8 +50,6 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
     }
 
 }
-
-
 
 export class Document extends vscode.TreeItem {
 
@@ -75,5 +73,17 @@ export class Document extends vscode.TreeItem {
     toString(): string {
         return "label is " + this.label + "; url is " + this.url;
     }
+
+}
+
+/**
+ * 本地数据视图注册
+ */
+export function getLinkTrees() {
+
+    // 获取视图数据注册
+    const documentDataProvider = new DocumentDataProvider();
+    // 注册视图数据
+    vscode.window.registerTreeDataProvider("documentLinks", documentDataProvider);
 
 }

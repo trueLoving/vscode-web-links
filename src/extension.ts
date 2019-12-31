@@ -1,24 +1,21 @@
 import * as vscode from 'vscode';
 
 // 命令行打开链接
-import { showDocLinks } from "./openDocLinks";
-
+import { showDocLinks } from "./commands/openDocLinks";
+// 添加链接
+import { addDocumentLinks } from "./commands/addDocLinks";
 // 视图数据
-import { DocumentDataProvider, Document } from "./documenLinks";
+import { getLinkTrees, Document } from "./documenLinks";
+
 
 
 export function activate() {
 
+	// 本地数据视图注册
+	getLinkTrees();
 
 	// 命令打开链接
 	// vscode.commands.registerCommand("extension.ss.openDocs", () => { showDocLinks() });
-
-
-	// 获取视图数据注册
-	const documentDataProvider = new DocumentDataProvider();
-	// 注册视图数据
-	vscode.window.registerTreeDataProvider("documentLinks", documentDataProvider);
-
 
 	// 右键打开链接
 	vscode.commands.registerCommand("documentLinks.open", (document: Document) => {
@@ -32,13 +29,19 @@ export function activate() {
 
 
 	// 添加链接
-	vscode.commands.registerCommand("documentLinks.add", () => vscode.window.showInformationMessage("add document"));
+	vscode.commands.registerCommand("documentLinks.add", () => addDocumentLinks());
+
+	// 刷新链接
+	vscode.commands.registerCommand("documentLinks.refresh", () => getLinkTrees());
 
 }
 
 
+
 // this method is called when your extension is deactivated
 export function deactivate() {
+
 	console.log("deactivate documentLinks");
 	vscode.window.showInformationMessage("deactivate documentLinks");
+
 }
