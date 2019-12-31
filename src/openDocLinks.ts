@@ -40,18 +40,11 @@ export function showDocLinks() {
     // 标签菜单
     let menu: string[] = [];
 
-    documetLinks.forEach((element: { label: string; url: string; }) => {
-        menu.push(element.label);
-    });
+    documetLinks.forEach((element: { label: string; url: string; }) => { menu.push(element.label); });
 
     vscode.window.showQuickPick(menu).then((selectedItem) => {
-
-        if (selectedItem) {
-            openDoc(selectedItem);
-        } else {
-            vscode.window.showInformationMessage("cancel to open document!");
-        }
-
+        selectedItem ? openDoc(selectedItem)
+            : vscode.window.showInformationMessage("cancel to open document!");
     });
 
 }

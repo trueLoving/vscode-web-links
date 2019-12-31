@@ -34,9 +34,16 @@ export class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
         let documentLinks = new Array<Document>();
 
         for (let i = 0; i < data.length; i++) {
-            // let document = new Document(data[i].label, data[i].url);
-            let document = <Document><unknown>data[i];
+
+            let label = data[i].label;
+            let url = data[i].url;
+            let document = new Document(label, url, {
+                command: 'document.doubleClickOpenDocs',
+                title: '',
+                arguments: [url]
+            })
             documentLinks.push(document);
+
         }
 
         return documentLinks;
@@ -52,7 +59,8 @@ export class Document extends vscode.TreeItem {
 
     public url: string;
 
-    constructor(label: string, url: string) {
+
+    constructor(label: string, url: string, public readonly command?: vscode.Command) {
         super(label);
         this.url = url;
     }

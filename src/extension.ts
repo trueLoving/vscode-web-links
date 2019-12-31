@@ -1,32 +1,30 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// open doc action function
+// 命令行打开链接
 import { showDocLinks } from "./openDocLinks";
 
-
+// 视图数据
 import { DocumentDataProvider, Document } from "./documenLinks";
 
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+export function activate() {
 
-	vscode.commands.registerCommand("extension.ss.openDocs", () => {
-		showDocLinks();
-	});
+	// 命令打开链接
+	vscode.commands.registerCommand("extension.ss.openDocs", () => { showDocLinks() });
 
+	// 获取视图数据注册
 	const documentDataProvider = new DocumentDataProvider();
+	// 注册视图数据
 	vscode.window.registerTreeDataProvider("documentLinks", documentDataProvider);
 
+	// 右键打开链接
 	vscode.commands.registerCommand("documentLinks.open", (document: Document) => {
-		if (document) {
-			vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(document.url));
-		} else {
-			vscode.window.showInformationMessage("test commands");
-		}
+		document ? vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(document.url))
+			: vscode.window.showInformationMessage("test commands");
 	});
+
+	// 双击打开links
+	vscode.commands.registerCommand("document.doubleClickOpenDocs", url => vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(url)));
 
 }
 
