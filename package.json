@@ -77,7 +77,11 @@
 			},
 			{
 				"command": "documentLinks.open",
-				"title": "open document Links"
+				"title": "open document links"
+			},
+			{
+				"command": "documentLinks.add",
+				"title": "add document links"
 			}
 		]
 	},
