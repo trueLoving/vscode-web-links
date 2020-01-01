@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 // 命令行打开链接
-// import { showDocLinks } from "./commands/openDocLinks";
+import { showDocLinks } from "./commands/openDocLinks";
 // 添加链接
 import { addDocumentLinks } from "./commands/addDocLinks";
 // 视图数据
@@ -14,13 +14,10 @@ export function activate() {
 	// 本地数据视图注册
 	getLinkTrees();
 
-	// 命令打开链接
-	// vscode.commands.registerCommand("extension.openDocs", () => { showDocLinks() });
-
-	// 右键打开链接
+	// 右键打开链接或者以命令形式打开链接
 	vscode.commands.registerCommand("documentLinks.open", (document: Document) => {
 		document ? vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(document.url))
-			: vscode.window.showInformationMessage("test commands");
+			: showDocLinks();
 	});
 
 
