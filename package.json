@@ -19,6 +19,10 @@
 	},
 	"activationEvents": [
 		"onCommand:documentLinks.open",
+		"onCommand:documentLinks.add",
+		"onCommand:documentLinks.refresh",
+		"onCommand:documentLinks.delete",
+		"onCommand:documentLinks.edit",
 		"onView:documentLinks"
 	],
 	"main": "./out/extension.js",

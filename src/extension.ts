@@ -20,13 +20,13 @@ export function activate() {
 			: showDocLinks();
 	});
 
-
-	// 单击打开links
+	// // 单击打开links
 	// vscode.commands.registerCommand("document.clickToOpenDocs", url => vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(url)));
-	// 添加链接
-	vscode.commands.registerCommand("documentLinks.add", () => addDocumentLinks());
 	// 刷新链接
 	vscode.commands.registerCommand("documentLinks.refresh", () => getLinkTrees());
+	// 添加链接
+	vscode.commands.registerCommand("documentLinks.add", () => addDocumentLinks());
+	
 
 }
 
