@@ -26,7 +26,10 @@ export function activate() {
 	vscode.commands.registerCommand("documentLinks.refresh", () => getLinkTrees());
 	// 添加链接
 	vscode.commands.registerCommand("documentLinks.add", () => addDocumentLinks());
-	
+	// 根据标签删除链接
+	vscode.commands.registerCommand("documentLinks.delete", () => vscode.window.showInformationMessage("delete it!"));
+	// 编辑链接
+	vscode.commands.registerCommand("documentLinks.edit", () => vscode.window.showInformationMessage("edit it!"));
 
 }
 
