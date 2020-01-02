@@ -1,10 +1,10 @@
 import * as vscode from "vscode";
 import * as path from 'path';
 
-class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
+class WebLinksDataProvider implements vscode.TreeDataProvider<WebLink>{
 
-    private _onDidChangeTreeData: vscode.EventEmitter<Document | undefined> = new vscode.EventEmitter<Document | undefined>();
-    readonly onDidChangeTreeData: vscode.Event<Document | undefined> = this._onDidChangeTreeData.event;
+    private _onDidChangeTreeData: vscode.EventEmitter<WebLink | undefined> = new vscode.EventEmitter<WebLink | undefined>();
+    readonly onDidChangeTreeData: vscode.Event<WebLink | undefined> = this._onDidChangeTreeData.event;
 
     constructor() { }
 
@@ -12,15 +12,15 @@ class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
         this._onDidChangeTreeData.fire();
     }
 
-    getTreeItem(element: Document): vscode.TreeItem | Thenable<vscode.TreeItem> {
+    getTreeItem(element: WebLink): vscode.TreeItem | Thenable<vscode.TreeItem> {
         return element;
     }
 
-    getChildren(element?: Document): vscode.ProviderResult<Document[]> {
+    getChildren(element?: WebLink): vscode.ProviderResult<WebLink[]> {
         if (element) {
             vscode.window.showInformationMessage(element.toString());
         } else {
-            return this.getData(vscode.workspace.getConfiguration().documentLinks);
+            return this.getData(vscode.workspace.getConfiguration().webLinks);
         }
     }
 
@@ -28,30 +28,30 @@ class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
      * 获取本地配置
      * @param data 本地配置参数
      */
-    private getData(data: Array<Document>): Array<Document> {
+    private getData(data: Array<WebLink>): Array<WebLink> {
 
-        let documentLinks = new Array<Document>();
+        let webLinks = new Array<WebLink>();
 
         for (let i = 0; i < data.length; i++) {
 
             let label: string = data[i].label;
             let url: string = data[i].url;
-            let document = new Document(label, url, {
-                command: 'document.clickToOpenDocs',
+            let webLink = new WebLink(label, url, {
+                command: 'webLink.clickToOpenDocs',
                 title: '',
                 arguments: [url]
             });
-            documentLinks.push(document);
+            webLinks.push(webLink);
 
         }
 
-        return documentLinks;
+        return webLinks;
 
     }
 
 }
 
-export class Document extends vscode.TreeItem {
+export class WebLink extends vscode.TreeItem {
 
 
     public url: string;
@@ -79,7 +79,12 @@ export class Document extends vscode.TreeItem {
         return "label is " + this.label + "; url is " + this.url;
     }
 
+
+    contextValue = 'webLink';
+
+
 }
+
 
 /**
  * 本地数据视图注册
@@ -87,8 +92,8 @@ export class Document extends vscode.TreeItem {
 export function getLinkTrees() {
 
     // 获取视图数据注册
-    const documentDataProvider = new DocumentDataProvider();
+    const webLinksDataProvider = new WebLinksDataProvider();
     // 注册视图数据
-    vscode.window.registerTreeDataProvider("documentLinks", documentDataProvider);
+    vscode.window.registerTreeDataProvider("webLinks", webLinksDataProvider);
 
 }

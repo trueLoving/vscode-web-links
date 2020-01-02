@@ -1,6 +1,6 @@
 {
-	"name": "document-links",
-	"displayName": "Document-links",
+	"name": "web-links",
+	"displayName": "Web-links",
 	"description": "practice and test",
 	"version": "0.0.1",
 	"engines": {
@@ -18,29 +18,29 @@
 		"url": "https://github.com/trueLoving/vscode-document-links.git"
 	},
 	"activationEvents": [
-		"onCommand:documentLinks.open",
-		"onCommand:documentLinks.add",
-		"onCommand:documentLinks.refresh",
-		"onCommand:documentLinks.delete",
-		"onCommand:documentLinks.edit",
-		"onView:documentLinks"
+		"onCommand:webLinks.open",
+		"onCommand:webLinks.add",
+		"onCommand:webLinks.refresh",
+		"onCommand:webLinks.delete",
+		"onCommand:webLinks.edit",
+		"onView:webLinks"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"viewsContainers": {
 			"activitybar": [
 				{
-					"id": "document-links",
-					"title": "Document Links",
+					"id": "web-links",
+					"title": "web Links",
 					"icon": "resources/document.svg"
 				}
 			]
 		},
 		"views": {
-			"document-links": [
+			"web-links": [
 				{
-					"id": "documentLinks",
-					"name": "document Links"
+					"id": "webLinks",
+					"name": "web Links"
 				},
 				{
 					"id": "others",
@@ -51,26 +51,26 @@
 		"menus": {
 			"view/title": [
 				{
-					"command": "documentLinks.refresh",
-					"when": "view == documentLinks",
+					"command": "webLinks.refresh",
+					"when": "view == webLinks",
 					"group": "navigation"
 				},
 				{
-					"command": "documentLinks.add",
-					"when": "view == documentLinks"
+					"command": "webLinks.add",
+					"when": "view == webLinks"
 				}
 			],
 			"view/item/context": [
 				{
-					"command": "documentLinks.open",
-					"when": "view == documentLinks"
+					"command": "webLinks.open",
+					"when": "view == webLinks && viewItem == webLink"
 				}
 			]
 		},
 		"configuration": {
-			"title": "documentLinks",
+			"title": "webLinks",
 			"properties": {
-				"documentLinks": {
+				"webLinks": {
 					"type": "array",
 					"default": [
 						{
@@ -87,25 +87,25 @@
 		},
 		"commands": [
 			{
-				"command": "documentLinks.refresh",
-				"title": "refresh document links",
+				"command": "webLinks.refresh",
+				"title": "refresh web links",
 				"icon": "resources/refresh.svg"
 			},
 			{
-				"command": "documentLinks.open",
-				"title": "open document links"
+				"command": "webLinks.open",
+				"title": "open web links"
 			},
 			{
-				"command": "documentLinks.add",
-				"title": "add document links"
-			},	
-			{
-				"command": "documentLinks.delete",
-				"title": "delete document links"
+				"command": "webLinks.add",
+				"title": "add web links"
 			},
 			{
-				"command": "documentLinks.edit",
-				"title": "edit document links"
+				"command": "webLinks.delete",
+				"title": "delete web links"
+			},
+			{
+				"command": "webLinks.edit",
+				"title": "edit web links"
 			}
 		]
 	},

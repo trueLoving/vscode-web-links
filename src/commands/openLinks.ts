@@ -12,11 +12,11 @@ export function openDoc(label: string) {
     let webUrl = "";
 
     // 获取关于插件的本地配置
-    const documetLinks = vscode.workspace.getConfiguration().documentLinks;
+    const webLinks = vscode.workspace.getConfiguration().webLinks;
 
 
     // 寻找要打开的文档相应的链接
-    documetLinks.forEach((element: { label: string; url: string; }) => {
+    webLinks.forEach((element: { label: string; url: string; }) => {
         if (element.label == label) {
             webUrl = element.url;
         }
@@ -32,19 +32,19 @@ export function openDoc(label: string) {
 /**
  * 显示文档列表
  */
-export function showDocLinks() {
+export function showWebLinks() {
 
     // 获取关于插件的本地配置
-    const documetLinks = vscode.workspace.getConfiguration().documentLinks;
+    const webLinks = vscode.workspace.getConfiguration().webLinks;
 
     // 标签菜单
     let menu: string[] = [];
 
-    documetLinks.forEach((element: { label: string; url: string; }) => { menu.push(element.label); });
+    webLinks.forEach((element: { label: string; url: string; }) => { menu.push(element.label); });
 
     vscode.window.showQuickPick(menu).then((selectedItem) => {
         selectedItem ? openDoc(selectedItem)
-            : vscode.window.showInformationMessage("cancel to open document!");
+            : vscode.window.showInformationMessage("cancel to open webLinks!");
     });
 
 }
