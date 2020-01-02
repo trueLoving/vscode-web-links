@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-
+import * as path from 'path';
 
 class DocumentDataProvider implements vscode.TreeDataProvider<Document>{
 
@@ -68,6 +68,11 @@ export class Document extends vscode.TreeItem {
 
     get description(): string {
         return this.label;
+    }
+
+    iconPath = {
+        dark: path.join(__filename, '..', '..', 'resources', 'links.svg'),
+        light: path.join(__filename, '..', '..', 'resources', 'links.svg')
     }
 
     toString(): string {
