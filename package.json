@@ -54,6 +54,10 @@
 					"command": "documentLinks.refresh",
 					"when": "view == documentLinks",
 					"group": "navigation"
+				},
+				{
+					"command": "documentLinks.add",
+					"when": "view == documentLinks"
 				}
 			],
 			"view/item/context": [
@@ -83,18 +87,18 @@
 		},
 		"commands": [
 			{
+				"command": "documentLinks.refresh",
+				"title": "refresh document links",
+				"icon": "resources/refresh.svg"
+			},
+			{
 				"command": "documentLinks.open",
 				"title": "open document links"
 			},
 			{
 				"command": "documentLinks.add",
 				"title": "add document links"
-			},
-			{
-				"command": "documentLinks.refresh",
-				"title": "refresh document links",
-				"icon": "resources/refresh.svg"
-			},
+			},	
 			{
 				"command": "documentLinks.delete",
 				"title": "delete document links"

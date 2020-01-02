@@ -17,11 +17,9 @@ export async function addDocumentLinks() {
         return;
     }
 
-    vscode.window.showInformationMessage(`${label}:${url}`);
+    vscode.workspace.getConfiguration().documentLinks.push({ label: label, url: url });
 
-    // vscode.workspace.getConfiguration().documentLinks.push({ label: label, url: url });
-
-    // vscode.window.showInformationMessage("添加成功，请刷新一下");
+    vscode.window.showInformationMessage("添加成功，请刷新一下");
 
 }
 
