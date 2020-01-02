@@ -10,14 +10,18 @@ export async function addDocumentLinks() {
 
     let url = await vscode.window.showInputBox({ value: '', placeHolder: 'input url' });
 
-    if (label == "" || url == "") {
+
+
+    if (label === undefined || url === undefined) {
         vscode.window.showErrorMessage("链接标签或者链接地址不能为空！");
         return;
     }
-    
-    vscode.workspace.getConfiguration().documentLinks.push({ label: label, url: url });
 
-    vscode.window.showInformationMessage("添加成功，请刷新一下");
+    vscode.window.showInformationMessage(`${label}:${url}`);
+
+    // vscode.workspace.getConfiguration().documentLinks.push({ label: label, url: url });
+
+    // vscode.window.showInformationMessage("添加成功，请刷新一下");
 
 }
 
