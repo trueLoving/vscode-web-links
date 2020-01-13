@@ -7,7 +7,8 @@ import { getLinkTrees, WebLink } from "./webLinks";
 import { showWebLinks } from "./commands/openLinks";
 // 添加链接
 import { addDocumentLinks } from "./commands/addLinks";
-
+// 删除链接
+import { deleteLink } from "./commands/deleteLinks";
 
 
 
@@ -29,7 +30,7 @@ export function activate() {
 	// 添加链接
 	vscode.commands.registerCommand("webLinks.add", () => addDocumentLinks());
 	// 根据标签删除链接
-	vscode.commands.registerCommand("webLinks.delete", () => vscode.window.showInformationMessage("delete it!"));
+	vscode.commands.registerCommand("webLinks.delete", (webLink: WebLink) => deleteLink(webLink));
 	// 编辑链接
 	vscode.commands.registerCommand("webLinks.edit", () => vscode.window.showInformationMessage("edit it!"));
 

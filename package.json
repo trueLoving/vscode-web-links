@@ -64,6 +64,10 @@
 				{
 					"command": "webLinks.open",
 					"when": "view == webLinks && viewItem == webLink"
+				},
+				{
+					"command": "webLinks.delete",
+					"when": "view == webLinks && viewItem == webLink"
 				}
 			]
 		},
