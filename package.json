@@ -68,6 +68,11 @@
 				{
 					"command": "webLinks.delete",
 					"when": "view == webLinks && viewItem == webLink"
+				},
+				{
+					"command": "webLinks.edit",
+					"when": "view == webLinks && viewItem == webLink",
+					"group": "inline"
 				}
 			]
 		},
@@ -109,7 +114,11 @@
 			},
 			{
 				"command": "webLinks.edit",
-				"title": "edit web links"
+				"title": "edit web links",
+				"icon":{
+					"light": "resources/edit.svg",
+					"dark": "resources/edit.svg"
+				}
 			}
 		]
 	},
