@@ -25,16 +25,28 @@ export function activate() {
 
 	// // 单击打开links
 	// vscode.commands.registerCommand("document.clickToOpenDocs", url => vscode.commands.executeCommand("vscode.open", vscode.Uri.parse(url)));
+
 	// 刷新链接
-	vscode.commands.registerCommand("webLinks.refresh", () => getLinkTrees());
+	vscode.commands.registerCommand("webLinks.refresh", () => {
+		getLinkTrees();
+		vscode.window.showInformationMessage("刷新成功")
+	});
+
 	// 添加链接
 	vscode.commands.registerCommand("webLinks.add", () => addDocumentLinks());
+
 	// 根据标签删除链接
-	vscode.commands.registerCommand("webLinks.delete", (webLink: WebLink) => deleteLink(webLink));
+	vscode.commands.registerCommand("webLinks.delete", (webLink: WebLink) => {
+		webLink ? deleteLink(webLink)
+			: vscode.window.showInformationMessage("hello world");
+	});
+
 	// 编辑链接
 	vscode.commands.registerCommand("webLinks.edit", () => vscode.window.showInformationMessage("edit it!"));
 
 }
+
+
 
 
 
