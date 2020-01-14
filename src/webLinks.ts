@@ -63,7 +63,7 @@ export class WebLink extends vscode.TreeItem {
     }
 
     get tooltip(): string {
-        return `${this.label}-${this.url}`;
+        return `${this.label} : ${this.url}`;
     }
 
     get description(): string {
